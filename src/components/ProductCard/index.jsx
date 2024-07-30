@@ -23,7 +23,7 @@ export const ProductCard = ({className}) => {
             ):
             (
                 <button onClick={() => setIsLike(!isLike)} className="absolute top-4 right-4">
-                    <img src="/icons/productCard/likeicon.svg"/>
+                    <img src="/icons/productCard/likeIcon.svg"/>
                 </button>
             )}
         </div>  
