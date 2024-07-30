@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.headerShadow {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+button, a {
+    cursor: pointer;
+    &:disabled {
+      opacity: 0.5;
+    }
+    &:hover {
+      opacity: 0.75;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+ 
+  @font-face {
+    font-family: helveticaNeue;
+    src: url(../public/fonts/HelveticaNeue/HelveticaNeueLight.otf);                
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: helveticaNeue;
+    src: url(../public/fonts/HelveticaNeue/HelveticaNeueRegullar.otf);                
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: helveticaNeue;
+    src: url(../public/fonts/HelveticaNeue/HelveticaNeueMedium.otf);                
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family: helveticaNeue;
+    src: url(../public/fonts/HelveticaNeue/HelveticaNeueSemiBold.otf);                
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-family: helveticaNeue;
+    src: url(../public/fonts/HelveticaNeue/HelveticaNeueBold.otf);                
+    font-weight: 700;
+  }
+  
+  .helveticaNeue {
+    font-family: helveticaNeue;
+  }
+
+  .shadowSort {
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  .shadowMobSort {
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.08);
+    @media (max-width: 767px) {
+      box-shadow: 0px 0px 0px 0px;
+    }
+  }
+
+  .sumPrice li {
+    align-items: baseline; 
+    display: flex; 
+    @media (max-width: 767px) {
+      align-items:center;
+      justify-content: space-between;
+    }
+   }
+
+  .sumPrice li::before {
+    content: ''; 
+    border-bottom: 1px dotted #000;
+    flex-grow: 1;
+    order: 2; 
+    margin: 0 5px;
+    @media (max-width: 767px) {
+      content: none;
+      border-bottom: none;
+      flex-grow: none;
+      order: none; 
+      margin: none;
+    }
+   }
+
+   .sumPrice .value {
+    order: 3;
+    @media (max-width: 767px) {
+      order: none; 
+    }
+   }
+
+   .carousel__dot--selected {
+    background-color: #000
+    ;
+   }
